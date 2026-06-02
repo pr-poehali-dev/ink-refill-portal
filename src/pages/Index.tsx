@@ -36,12 +36,12 @@ const PRICE_DATA = [
 ];
 
 const SERVICES = [
-  { icon: "Printer", title: "Заправка картриджей", desc: "Заправляем струйные и лазерные картриджи всех популярных брендов. Используем оригинальные чернила и тонер." },
-  { icon: "Settings", title: "Ремонт картриджей", desc: "Восстановление повреждённых и нерабочих картриджей. Замена барабанов, ракелей, чипов." },
-  { icon: "Truck", title: "Доставка и самовывоз", desc: "Забираем и привозим картриджи по городу. Курьер приедет в удобное для вас время." },
-  { icon: "Clock", title: "Срочная заправка", desc: "Экспресс-заправка за 30 минут при наличии расходников. Не нужно ждать — уходите сразу с готовым картриджем." },
+  { icon: "Printer", title: "Заправка лазерных картриджей", desc: "Заправляем лазерные картриджи всех популярных брендов: HP, Canon, Samsung, Xerox, Brother. Используем качественный тонер." },
+  { icon: "Wrench", title: "Ремонт струйных принтеров Epson", desc: "Профессиональный ремонт струйных принтеров марки Epson: замена головок, чистка дюз, устранение подачи бумаги." },
+  { icon: "Truck", title: "Выезд по СПб и ЛО", desc: "Работаем по всему Санкт-Петербургу и Ленинградской области. Заберём и привезём картридж сами." },
+  { icon: "Clock", title: "Срочная заправка", desc: "Экспресс-заправка в день обращения. Не нужно ждать — уходите сразу с готовым картриджем." },
   { icon: "Shield", title: "Гарантия качества", desc: "Даём гарантию 30 дней на все работы. Если что-то пойдёт не так — переделаем бесплатно." },
-  { icon: "Package", title: "Корпоративным клиентам", desc: "Обслуживание организаций: договоры, акты, счета-фактуры. Скидки при регулярных заказах." },
+  { icon: "Package", title: "Корпоративным клиентам", desc: "Обслуживание организаций: договоры, акты, счета-фактуры. Скидки при регулярном обслуживании." },
 ];
 
 const STEPS = [
@@ -132,15 +132,15 @@ export default function Index() {
           <div>
             <div className="inline-flex items-center gap-2 bg-brand/10 text-brand px-3 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider">
               <Icon name="Zap" size={12} />
-              Быстро · Качественно · С гарантией
+              Санкт-Петербург и Ленинградская область
             </div>
             <h1 className="font-oswald text-5xl md:text-6xl font-bold leading-tight text-ink mb-6">
               Заправка<br />
               <span className="text-brand">картриджей</span><br />
-              в вашем городе
+              в Санкт-Петербурге
             </h1>
             <p className="text-slate-500 text-lg leading-relaxed mb-8 max-w-md">
-              Профессиональная заправка струйных и лазерных картриджей. Все бренды. Гарантия 30 дней. Работаем с 9:00 до 20:00.
+              Заправка лазерных картриджей и ремонт принтеров Epson. Работаем по СПб и Ленинградской области. Опыт более 15 лет.
             </p>
             <div className="flex flex-wrap gap-3">
               <button
@@ -160,7 +160,7 @@ export default function Index() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-8">
-              {[["500+", "клиентов"], ["5 лет", "на рынке"], ["30 дней", "гарантия"]].map(([val, label]) => (
+              {[["250+", "клиентов"], ["15 лет", "опыта"], ["30 дней", "гарантия"]].map(([val, label]) => (
                 <div key={label}>
                   <div className="font-oswald text-2xl font-bold text-brand">{val}</div>
                   <div className="text-xs text-slate-500 uppercase tracking-wide">{label}</div>
@@ -281,19 +281,19 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-14 items-center">
           <div>
             <p className="text-brand text-xs font-semibold uppercase tracking-widest mb-2">О компании</p>
-            <h2 className="font-oswald text-4xl font-bold text-ink mb-6">Мы работаем с 2019 года</h2>
+            <h2 className="font-oswald text-4xl font-bold text-ink mb-6">Более 15 лет на рынке СПб</h2>
             <p className="text-slate-500 leading-relaxed mb-4">
-              ЧернилоСервис — небольшой, но профессиональный сервис по заправке картриджей. Мы специализируемся на качественном обслуживании принтеров для дома и офиса.
+              Мы специализируемся на заправке лазерных картриджей и ремонте струйных принтеров Epson в Санкт-Петербурге и Ленинградской области. За 15 лет работы нам доверяют более 250 клиентов.
             </p>
             <p className="text-slate-500 leading-relaxed mb-8">
-              Используем только сертифицированные чернила и тонер. Каждый картридж проверяется на стенде перед выдачей клиенту. Работаем честно: если картридж не подлежит восстановлению — скажем об этом сразу.
+              Используем только качественный тонер. Каждый картридж проверяется на стенде перед выдачей клиенту. Работаем честно: если картридж не подлежит восстановлению — скажем об этом сразу.
             </p>
             <div className="grid grid-cols-2 gap-4">
               {[
-                "Оригинальные чернила и тонер",
+                "Качественный тонер для лазерных принтеров",
                 "Проверка на стенде",
                 "Гарантия 30 дней",
-                "Все бренды принтеров",
+                "Ремонт Epson любой сложности",
               ].map((text) => (
                 <div key={text} className="flex items-start gap-2">
                   <Icon name="CheckCircle" size={16} className="text-brand mt-0.5 shrink-0" />
@@ -305,10 +305,10 @@ export default function Index() {
 
           <div className="grid grid-cols-2 gap-4">
             {[
-              { val: "500+", label: "Довольных клиентов" },
-              { val: "5 лет", label: "На рынке" },
-              { val: "2000+", label: "Картриджей в год" },
-              { val: "30 мин", label: "Экспресс-заправка" },
+              { val: "250+", label: "Довольных клиентов" },
+              { val: "15 лет", label: "На рынке СПб" },
+              { val: "1000+", label: "Картриджей в год" },
+              { val: "СПб и ЛО", label: "Зона обслуживания" },
             ].map((stat) => (
               <div key={stat.label} className="bg-slate-50 rounded-xl p-6 border border-slate-100 text-center">
                 <div className="font-oswald text-3xl font-bold text-brand mb-1">{stat.val}</div>
