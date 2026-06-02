@@ -96,11 +96,11 @@ export default function Index() {
           </nav>
 
           <a
-            href="tel:+79001234567"
+            href="tel:+79650224299"
             className="hidden md:flex items-center gap-2 bg-brand text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-dark transition-colors"
           >
             <Icon name="Phone" size={14} />
-            +7 (900) 123-45-67
+            +7 (965) 022-42-99
           </a>
 
           <button className="md:hidden p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -115,9 +115,9 @@ export default function Index() {
                 {l.label}
               </button>
             ))}
-            <a href="tel:+79001234567" className="mt-2 flex items-center gap-2 bg-brand text-white px-4 py-3 rounded-lg text-sm font-semibold justify-center">
+            <a href="tel:+79650224299" className="mt-2 flex items-center gap-2 bg-brand text-white px-4 py-3 rounded-lg text-sm font-semibold justify-center">
               <Icon name="Phone" size={14} />
-              +7 (900) 123-45-67
+              +7 (965) 022-42-99
             </a>
           </div>
         )}
@@ -143,13 +143,15 @@ export default function Index() {
               Заправка лазерных картриджей и ремонт принтеров Epson. Работаем по СПб и Ленинградской области. Опыт более 15 лет.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button
-                onClick={() => scrollTo("#contacts")}
+              <a
+                href="https://t.me/max"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-brand-dark transition-all hover:scale-105 flex items-center gap-2"
               >
-                <Icon name="MessageCircle" size={16} />
+                <Icon name="Send" size={16} />
                 Оставить заявку
-              </button>
+              </a>
               <button
                 onClick={() => scrollTo("#prices")}
                 className="bg-white border-2 border-slate-200 text-slate-700 px-6 py-3 rounded-lg font-semibold text-base hover:border-brand hover:text-brand transition-all flex items-center gap-2"
@@ -329,9 +331,9 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { icon: "Phone", label: "Телефон", value: "+7 (900) 123-45-67", href: "tel:+79001234567" },
-              { icon: "MessageCircle", label: "WhatsApp / Telegram", value: "Написать в мессенджер", href: "#" },
-              { icon: "MapPin", label: "Адрес", value: "ул. Примерная, д. 15, офис 3", href: "#" },
+              { icon: "Phone", label: "Телефон", value: "+7 (965) 022-42-99", href: "tel:+79650224299" },
+              { icon: "Send", label: "Telegram", value: "@max — оставить заявку", href: "https://t.me/max" },
+              { icon: "MapPin", label: "Адрес", value: "Мурино, ул. Оборонная, д. 2, корп. 3", href: "https://yandex.ru/maps/?text=Мурино+ул+Оборонная+2+корп+3" },
             ].map((c) => (
               <a
                 key={c.label}
