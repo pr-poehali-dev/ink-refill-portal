@@ -293,7 +293,7 @@ export default function Index() {
                 "Полный цикл обслуживания оргтехники",
                 "Ремонт на месте при выезде",
                 "Гарантия — за наш счёт",
-                "Инженеры с опытом 10+ лет",
+                "Ремонт Epson любой сложности",
               ].map((text) => (
                 <div key={text} className="flex items-start gap-2">
                   <Icon name="CheckCircle" size={16} className="text-brand mt-0.5 shrink-0" />
