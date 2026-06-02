@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "Контакты", href: "#contacts" },
 ];
 
-const BRANDS = ["Все", "HP", "Xerox"];
+const BRANDS = ["Все", "HP", "Xerox", "Ricoh"];
 
 const PRICE_DATA = [
   { brand: "HP", printer: "Color Pro 300 M351/М375/400 475/M451", cartridge: "CE411X Cyan", price: 1800 },
@@ -305,6 +305,33 @@ const PRICE_DATA = [
   { brand: "Xerox", printer: "Phaser 3100 (G191-6000)", cartridge: "106R01379", price: 950 },
   { brand: "Xerox", printer: "Phaser 3020/WC 3025", cartridge: "106R02773", price: 700 },
   { brand: "Xerox", printer: "Phaser 3010/3040/WC3045", cartridge: "106R02183", price: 850 },
+  { brand: "Ricoh", printer: "Aficio SP 220Nw/220SNw/220SFNw", cartridge: "SP201HS", price: 850 },
+  { brand: "Ricoh", printer: "Aficio SP 3710SF/3710DN", cartridge: "SP3710X", price: 1600 },
+  { brand: "Ricoh", printer: "Aficio M C250FWB/PC300W/PC301W", cartridge: "408355 Yellow", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio M C250FWB/PC300W/PC301W", cartridge: "408354 Magenta", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio M C250FWB/PC300W/PC301W", cartridge: "408353 Cyan", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio M C250FWB/PC300W/PC301W", cartridge: "408352 Black", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio SP C250DN/C250SF/C260/C261SF", cartridge: "SP C250 Cyan", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio SP C250DN/C250SF/C260/C261SF", cartridge: "SP C250 Magenta", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio SP C250DN/C250SF/C260/C261SF", cartridge: "SP C250 Yellow", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio SP C250DN/C250SF/C260/C261SF", cartridge: "SP C250 Black", price: 1800 },
+  { brand: "Ricoh", printer: "Aficio SP111", cartridge: "SP110E", price: 750 },
+  { brand: "Ricoh", printer: "Aficio SP100", cartridge: "SP100HS", price: 750 },
+  { brand: "Ricoh", printer: "Aficio SP 310DN/DNw/SFN/SP311/SP312/SP325", cartridge: "SP311XE", price: 1350 },
+  { brand: "Ricoh", printer: "Aficio SP 310DN/DNw/SFN/SP311/SP312/SP325", cartridge: "SP311HE", price: 850 },
+  { brand: "Ricoh", printer: "Aficio MP2500/MP2500LN/MP2500SP", cartridge: "MP 2500E", price: 4400 },
+  { brand: "Ricoh", printer: "Aficio SP330DNw/SP330SN/SP330SFN", cartridge: "SP330H", price: 1350 },
+  { brand: "Ricoh", printer: "Aficio 1515/MP161/MV715/Nashuatec 415", cartridge: "Type 1270D", price: 1650 },
+  { brand: "Ricoh", printer: "Aficio 1022/1027/1032/2022/2027/2032/3025/3030/MP2510/MP3010", cartridge: "Type 2320D", price: 1650 },
+  { brand: "Ricoh", printer: "Aficio MP C2003/C2004/C2011/C2503/C2504", cartridge: "841928 Cyan", price: 3500 },
+  { brand: "Ricoh", printer: "Aficio MP C2003/C2004/C2011/C2503/C2504", cartridge: "841927 Magenta", price: 3500 },
+  { brand: "Ricoh", printer: "Aficio MP C2003/C2004/C2011/C2503/C2504", cartridge: "841926 Yellow", price: 3500 },
+  { brand: "Ricoh", printer: "Aficio MP C2003/C2004/C2011/C2503/C2504", cartridge: "841925 Black", price: 2850 },
+  { brand: "Ricoh", printer: "Aficio SP3600DN/SF/SP3610SF/SP4510DN/SF", cartridge: "SP4500E", price: 1350 },
+  { brand: "Ricoh", printer: "Aficio SP300", cartridge: "SP300HE", price: 850 },
+  { brand: "Ricoh", printer: "Aficio SP230", cartridge: "SP230H", price: 850 },
+  { brand: "Ricoh", printer: "Aficio SP200/201/202/203/210/211/212/213", cartridge: "SP200HS", price: 850 },
+  { brand: "Ricoh", printer: "Aficio SP150", cartridge: "SP150HE", price: 750 },
 ];
 
 const SERVICES = [
