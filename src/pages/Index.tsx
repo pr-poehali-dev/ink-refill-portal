@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "Контакты", href: "#contacts" },
 ];
 
-const BRANDS = ["Все", "HP", "Xerox", "Ricoh"];
+const BRANDS = ["Все", "HP", "Xerox", "Ricoh", "Brother"];
 
 const PRICE_DATA = [
   { brand: "HP", printer: "Color Pro 300 M351/М375/400 475/M451", cartridge: "CE411X Cyan", price: 1800 },
@@ -332,6 +332,49 @@ const PRICE_DATA = [
   { brand: "Ricoh", printer: "Aficio SP230", cartridge: "SP230H", price: 850 },
   { brand: "Ricoh", printer: "Aficio SP200/201/202/203/210/211/212/213", cartridge: "SP200HS", price: 850 },
   { brand: "Ricoh", printer: "Aficio SP150", cartridge: "SP150HE", price: 750 },
+  { brand: "Brother", printer: "HL-3040CN/3070CW/MFC9010CN", cartridge: "TN-230BK", price: 1650 },
+  { brand: "Brother", printer: "HL-3040CN/3070CW/MFC9010CN", cartridge: "TN-230M", price: 1650 },
+  { brand: "Brother", printer: "HL-3040CN/3070CW/MFC9010CN", cartridge: "TN-230Y", price: 1650 },
+  { brand: "Brother", printer: "HL-3040CN/3070CW/MFC9010CN", cartridge: "TN-230C", price: 1650 },
+  { brand: "Brother", printer: "HL-L2300/L2340/L2360/L2365/DCP-L2500/L2520/L2540/MFC-L2700/L2720/L2740", cartridge: "TN-2375", price: 700 },
+  { brand: "Brother", printer: "HL-L2300/L2340/L2360/L2365/DCP-L2500/L2520/L2540/MFC-L2700/L2720/L2740", cartridge: "TN-2335", price: 700 },
+  { brand: "Brother", printer: "HL-L2350DW/L2370DN/L2375DW/L2530DW/L2550DN/DCP-L2550DW/MFC-L2710DW/L2750DW", cartridge: "TN-2420", price: 700 },
+  { brand: "Brother", printer: "HL-L3210CW/L3230CDW/L3270CDW/L3290CDW/DCP-L3550CDW/MFC-L3710DW/L3750CDW/L3770CDW", cartridge: "TN-217M", price: 1650 },
+  { brand: "Brother", printer: "HL-L3210CW/L3230CDW/L3270CDW/L3290CDW/DCP-L3550CDW/MFC-L3710DW/L3750CDW/L3770CDW", cartridge: "TN-217Y", price: 1650 },
+  { brand: "Brother", printer: "HL-L3210CW/L3230CDW/L3270CDW/L3290CDW/DCP-L3550CDW/MFC-L3710DW/L3750CDW/L3770CDW", cartridge: "TN-217C", price: 1650 },
+  { brand: "Brother", printer: "HL-L3210CW/L3230CDW/L3270CDW/L3290CDW/DCP-L3550CDW/MFC-L3710DW/L3750CDW/L3770CDW", cartridge: "TN-217BK", price: 1650 },
+  { brand: "Brother", printer: "HL-3140/HL-3170/MFC-9330/DCP-9020", cartridge: "TN-241Y", price: 1650 },
+  { brand: "Brother", printer: "HL-3140/HL-3170/MFC-9330/DCP-9020", cartridge: "TN-241C", price: 1650 },
+  { brand: "Brother", printer: "HL-3140/HL-3170/MFC-9330/DCP-9020", cartridge: "TN-241BK", price: 1650 },
+  { brand: "Brother", printer: "HL-3140/HL-3170/MFC-9330/DCP-9020", cartridge: "TN-241M", price: 1650 },
+  { brand: "Brother", printer: "HL-2130/DCP-7055", cartridge: "TN-2010", price: 700 },
+  { brand: "Brother", printer: "HL-2130/DCP-7055", cartridge: "TN-2080", price: 700 },
+  { brand: "Brother", printer: "HL-2035", cartridge: "TN-2085", price: 700 },
+  { brand: "Brother", printer: "HL-2132/DCP-7057", cartridge: "TN-2090", price: 700 },
+  { brand: "Brother", printer: "HL-2140/L2150N/L2170W/DCP-7030/7040/7045N/MFC-7320/7440N/7840W", cartridge: "TN-2175", price: 700 },
+  { brand: "Brother", printer: "HL-2140/L2150N/L2170W/DCP-7030/7040/7045N/MFC-7320/7440N/7840W", cartridge: "TN-2135", price: 700 },
+  { brand: "Brother", printer: "HL-2240/L2250/MFC-7360/7860/DCP-7060R/7065/7070", cartridge: "TN-2275", price: 700 },
+  { brand: "Brother", printer: "HL-2240/L2250/MFC-7360/7860/DCP-7060R/7065/7070", cartridge: "TN-2235", price: 700 },
+  { brand: "Brother", printer: "HL-2030/2040/2070/DCP-7010/7025/MFC-7225/7420", cartridge: "TN-2075", price: 700 },
+  { brand: "Brother", printer: "HL-1202/DCP1602", cartridge: "TN-1095", price: 700 },
+  { brand: "Brother", printer: "HL-1010/1012/1110/1112/DCP-1510/1512/MFC-1810/1815/1912/DCP-1610", cartridge: "TN-1075", price: 700 },
+  { brand: "Brother", printer: "HL-1030/1230/1240/1250/1270/1430/1440/1450/1470/P2500", cartridge: "TN-6300", price: 700 },
+  { brand: "Brother", printer: "HL-1030/1230/1240/1250/1270/1430/1440/1450/1470/P2500", cartridge: "TN-6600", price: 1100 },
+  { brand: "Brother", printer: "HL-L5000/L5100/L5200/L6250/L6300/L6400/DCP-L5500/L6600/MFC-L5700/L5750/L6800/L6900", cartridge: "TN-3430", price: 750 },
+  { brand: "Brother", printer: "HL-L5000/L5100/L5200/L6250/L6300/L6400/DCP-L5500/L6600/MFC-L5700/L5750/L6800/L6900", cartridge: "TN-3480", price: 1550 },
+  { brand: "Brother", printer: "HL-6180/DCP-8250/MFC-8950", cartridge: "TN-3390", price: 1400 },
+  { brand: "Brother", printer: "HL-5440/5450/5470/6180/DCP-8110/8250/MFC-8520/8950", cartridge: "TN-3330", price: 700 },
+  { brand: "Brother", printer: "HL-5440/5450/5470/6180/DCP-8110/8250/MFC-8520/8950", cartridge: "TN-3380", price: 1000 },
+  { brand: "Brother", printer: "HL-5240/5250/5270/DCP-8065/MFC-8460/8860/8870", cartridge: "TN-3130", price: 750 },
+  { brand: "Brother", printer: "HL-5240/5250/5270/MFC-8460/8860/8870", cartridge: "TN-3170", price: 1100 },
+  { brand: "Brother", printer: "DCP-8085/MFC-8880/8890/HL-5340/5350/5370/5380", cartridge: "TN-3280", price: 1100 },
+  { brand: "Brother", printer: "DCP-8085/MFC-8880/8890/HL-5340/5350/5370/5380", cartridge: "TN-3230", price: 800 },
+  { brand: "Brother", printer: "DCP-8020/8025/HL-1650/1670/1850/1870/5030/5040/5050/MFC-8020/8420/8820", cartridge: "TN-7300", price: 700 },
+  { brand: "Brother", printer: "MFC-8350/8750/9600/9650/9660/9750/9760/9850/9860/9870", cartridge: "TN-6300", price: 750 },
+  { brand: "Brother", printer: "MFC-8350/8750/9600/9650/9660/9750/9760/9850/9860/9870", cartridge: "TN-6600", price: 1100 },
+  { brand: "Brother", printer: "MFC-4800/9030/9070/9160/9180/Fax-2850/8070", cartridge: "TN-8000", price: 750 },
+  { brand: "Brother", printer: "FAX-4750/5750/8350/8360/8750/IntelliFAX-4100/4750/5750", cartridge: "TN-6300", price: 700 },
+  { brand: "Brother", printer: "FAX-4750/5750/8350/8360/8750/IntelliFAX-4100/4750/5750", cartridge: "TN-6600", price: 1100 },
 ];
 
 const SERVICES = [
