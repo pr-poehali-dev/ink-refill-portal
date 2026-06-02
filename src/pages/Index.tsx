@@ -60,10 +60,14 @@ const TYPE_COLORS: Record<string, string> = {
 export default function Index() {
   const [activeBrand, setActiveBrand] = useState("Все");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filtered = activeBrand === "Все"
-    ? PRICE_DATA
-    : PRICE_DATA.filter((p) => p.brand === activeBrand);
+  const filtered = PRICE_DATA.filter((p) => {
+    const matchBrand = activeBrand === "Все" || p.brand === activeBrand;
+    const q = searchQuery.toLowerCase();
+    const matchSearch = q === "" || p.brand.toLowerCase().includes(q) || p.model.toLowerCase().includes(q);
+    return matchBrand && matchSearch;
+  });
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -217,6 +221,24 @@ export default function Index() {
             </p>
           </div>
 
+          <div className="mb-6">
+            <div className="relative max-w-md mx-auto">
+              <Icon name="Search" size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Поиск по принтеру или картриджу..."
+                className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-slate-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/10 transition-all"
+              />
+              {searchQuery && (
+                <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+                  <Icon name="X" size={14} />
+                </button>
+              )}
+            </div>
+          </div>
+
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             {BRANDS.map((b) => (
               <button
@@ -239,7 +261,12 @@ export default function Index() {
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide col-span-2">Модель картриджа</div>
               <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide text-right">Цена, ₽</div>
             </div>
-            {filtered.map((item, i) => (
+            {filtered.length === 0 ? (
+              <div className="px-4 py-12 text-center text-slate-400">
+                <Icon name="SearchX" size={32} className="mx-auto mb-3 opacity-40" />
+                <p className="text-sm">Ничего не найдено — попробуйте другой запрос</p>
+              </div>
+            ) : filtered.map((item, i) => (
               <div key={i} className="grid grid-cols-4 px-4 py-3 border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors items-center">
                 <div className="text-sm font-semibold text-ink">{item.brand}</div>
                 <div className="text-sm text-slate-600">{item.model}</div>
